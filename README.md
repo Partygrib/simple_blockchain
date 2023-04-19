@@ -13,6 +13,6 @@
 
 ## Пример работы
 
-![example_0](https://github.com/Partygrib/simple_blockchain/blob/main/resources/example_0.PNG)
+![example_0](https://github.com/Partygrib/simple_blockchain/blob/main/resources/example_0.png)
 
 ![example_1](https://github.com/Partygrib/simple_blockchain/blob/main/resources/example_1.PNG)
