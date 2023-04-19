@@ -1,0 +1,33 @@
+version: "3.8"
+
+services:
+  service_1:
+    image: simple-chain
+    container_name: service_1
+    environment:
+      NONCE_MODE: 0
+      PORT: 8080
+      NEIGHBORS: service_2:8081,service_3:8082
+      PYTHONUNBUFFERED: 1
+
+  service_2:
+    image: simple-chain
+    container_name: service_2
+    environment:
+      NONCE_MODE: 1
+      PORT: 8081
+      NEIGHBORS: service_1:8080,service_3:8082
+      PYTHONUNBUFFERED: 1
+
+  service_3:
+    image: simple-chain
+    container_name: service_3
+    environment:
+      NONCE_MODE: 2
+      PORT: 8082
+      NEIGHBORS: service_1:8080,service_2:8081
+      MASTER: true
+      PYTHONUNBUFFERED: 1
+    depends_on:
+      - service_1
+      - service_2

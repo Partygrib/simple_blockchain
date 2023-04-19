@@ -132,8 +132,8 @@ class Node:
                 except JSONDecodeError:
                     self.__chain = dump_chain
                     return False
-                block = Block(block_data['index'], block_data['prev_hash'], block_data['hash'], block_data['data'],
-                              block_data['nonce'])
+                block = Block(block_data['index'], block_data['prev_hash'], block_data['data'],
+                              block_data['nonce'], block_data['hash'])
                 if not block.check_hash():
                     self.__chain = dump_chain
                     return False
