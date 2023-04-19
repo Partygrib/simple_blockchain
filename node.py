@@ -25,6 +25,9 @@ class Node:
         self.__chain = []
         self.mode = nonce_mode
 
+    def get_last_index(self):
+        return len(self.__chain)
+
     def next_nonce(self):
         if self.mode == "0":
             if self.nonce == self.max_int:
