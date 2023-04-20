@@ -8,6 +8,7 @@
 ### Используя Docker:  
 Запустите терминал в папке проекта.   
 Введите следующие команды: 
+
 >docker build -t simple-chain .    
 >docker-compose up
 
